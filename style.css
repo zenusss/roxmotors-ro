@@ -865,9 +865,23 @@ a {
   background: var(--off-white);
 }
 
+.specs-category-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: var(--dark);
+  letter-spacing: 0.1em;
+  margin: 48px 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
 .specs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.specs-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
   gap: 2px;
   margin-bottom: 40px;
 }
