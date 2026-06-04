@@ -1,4 +1,147 @@
 /* ============================================================
+   EXTRA UTILITIES
+   ============================================================ */
+.hidden { display: none !important; }
+
+/* NAV CTA button */
+.nav-link-cta {
+  padding: 8px 18px;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+}
+.nav-link-cta:hover { background: var(--gold); color: var(--black) !important; }
+.nav-link-cta::after { display: none !important; }
+
+/* Specs band (all-terrain) */
+.specs-band {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.spec-band-item { border-left: 2px solid var(--gold); padding-left: 16px; }
+.spec-band-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.spec-band-lbl { font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* Full note (small disclaimer inside full section) */
+.full-note {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.6;
+  max-width: 520px;
+  font-style: italic;
+}
+
+/* Safety stats */
+.safety-stats {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+.safety-stat { border-left: 2px solid var(--gold); padding-left: 20px; }
+.safety-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 34px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.safety-lbl { font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.04em; text-transform: uppercase; max-width: 200px; line-height: 1.4; }
+
+/* Cabin section */
+.cabin-section { padding: 100px 0; }
+.cabin-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+.cabin-tab {
+  flex: 1;
+  padding: 20px 28px;
+  background: var(--off-white);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+  font-family: 'Inter', sans-serif;
+  border-bottom: 3px solid transparent;
+}
+.cabin-tab:hover { background: #ebe9e4; }
+.cabin-tab.active { background: var(--black); border-bottom-color: var(--gold); }
+.cabin-tab-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+  transition: color 0.3s;
+}
+.cabin-tab.active .cabin-tab-title { color: var(--white); }
+.cabin-tab-sub {
+  display: block;
+  font-size: 12px;
+  color: var(--gray);
+  letter-spacing: 0.08em;
+}
+.cabin-tab.active .cabin-tab-sub { color: var(--gold); }
+.cabin-display { margin-bottom: 48px; }
+
+/* Cabin features grid */
+.cabin-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+  margin-bottom: 2px;
+}
+.cabin-feat-card {
+  background: var(--off-white);
+  padding: 32px 24px;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.cabin-feat-card:hover { background: var(--black); transform: translateY(-4px); }
+.cabin-feat-card:hover .cabin-feat-title,
+.cabin-feat-card:hover .cabin-feat-desc { color: var(--white); }
+.cabin-feat-icon { font-size: 32px; margin-bottom: 14px; }
+.cabin-feat-title { font-weight: 600; font-size: 15px; color: var(--dark); margin-bottom: 8px; transition: color 0.3s; }
+.cabin-feat-desc { font-size: 13px; color: var(--gray); line-height: 1.6; transition: color 0.3s; }
+
+/* Gallery grid 1 (full width) */
+.gallery-grid-1 .gallery-item img { min-height: 480px; }
+
+/* Color note */
+.color-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Responsive additions */
+@media (max-width: 1024px) {
+  .cabin-features { grid-template-columns: repeat(2, 1fr); }
+  .safety-stats { gap: 20px; }
+  .specs-band { gap: 20px; }
+}
+@media (max-width: 768px) {
+  .cabin-tabs { flex-direction: column; }
+  .cabin-features { grid-template-columns: 1fr 1fr; }
+  .specs-band { gap: 16px; }
+  .safety-stats { flex-direction: column; gap: 16px; }
+  .gallery-grid-1 .gallery-item img { min-height: 260px; }
+  .spec-band-val { font-size: 28px; }
+}
+
+/* ============================================================
    ROX ADAMAS România — Premium CSS
    ============================================================ */
 
