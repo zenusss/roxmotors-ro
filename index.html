@@ -659,7 +659,111 @@
     </div>
   </section>
 
+  <!-- VIDEO GALLERY -->
+  <section class="videos-section" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">VIDEOCLIPURI OFICIALE</p>
+        <h2 class="section-title">ROX ADAMAS în Acțiune</h2>
+        <p class="section-sub">Videoclipuri oficiale de pe canalul ROX Motor Global — design, off-road, tech și experiența de lux.</p>
+      </div>
+
+      <!-- Video principal (featured) -->
+      <div class="video-featured reveal">
+        <div class="video-embed-wrap">
+          <iframe
+            id="vid-main"
+            src="https://www.youtube.com/embed/HxZVMHgYlzM?autoplay=0&rel=0&modestbranding=1"
+            title="Introducing the ROX ADAMAS, the All New Luxury All-terrain SUV"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-featured-label">
+          <span class="video-tag">PREZENTARE OFICIALĂ</span>
+          <div class="video-featured-title">Introducing the ROX ADAMAS — Noul SUV de Lux All-Terrain</div>
+        </div>
+      </div>
+
+      <!-- Grid 4 videouri -->
+      <div class="videos-grid">
+        <div class="video-card reveal" onclick="loadVideo(this, 'OgAWKFuJJ_M')">
+          <div class="video-thumb-wrap">
+            <img src="https://img.youtube.com/vi/OgAWKFuJJ_M/maxresdefault.jpg" alt="Bold design, built for conquer" loading="lazy">
+            <div class="video-play-btn">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.6)"/>
+                <polygon points="19,14 37,24 19,34" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <span class="video-tag">DESIGN</span>
+            <div class="video-card-title">ROX ADAMAS — Bold Design, Built for Conquer</div>
+          </div>
+        </div>
+
+        <div class="video-card reveal" onclick="loadVideo(this, 'GDrdqzgVc-I')">
+          <div class="video-thumb-wrap">
+            <img src="https://img.youtube.com/vi/GDrdqzgVc-I/maxresdefault.jpg" alt="Gliding Off-road Driving" loading="lazy">
+            <div class="video-play-btn">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.6)"/>
+                <polygon points="19,14 37,24 19,34" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <span class="video-tag">OFF-ROAD</span>
+            <div class="video-card-title">ROX ADAMAS — Gliding Off-Road Driving</div>
+          </div>
+        </div>
+
+        <div class="video-card reveal" onclick="loadVideo(this, 'aXmaTFP67Ew')">
+          <div class="video-thumb-wrap">
+            <img src="https://img.youtube.com/vi/aXmaTFP67Ew/maxresdefault.jpg" alt="Entertainment for Every Journey" loading="lazy">
+            <div class="video-play-btn">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.6)"/>
+                <polygon points="19,14 37,24 19,34" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <span class="video-tag">SMART TECH</span>
+            <div class="video-card-title">ROX ADAMAS — Entertainment for Every Journey</div>
+          </div>
+        </div>
+
+        <div class="video-card reveal" onclick="loadVideo(this, '77mE3GjpjFk')">
+          <div class="video-thumb-wrap">
+            <img src="https://img.youtube.com/vi/77mE3GjpjFk/maxresdefault.jpg" alt="Royal Edition" loading="lazy">
+            <div class="video-play-btn">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.6)"/>
+                <polygon points="19,14 37,24 19,34" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <span class="video-tag">EDIȚIE SPECIALĂ</span>
+            <div class="video-card-title">ROX ADAMAS Royal Edition — Lux Suprem</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-channel-link">
+        <a href="https://www.youtube.com/@ROXMotorGlobal" target="_blank" class="btn-outline-dark">
+          ▶ Vezi toate videourile pe YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
+
   <section class="contact-section" id="contact">
     <div class="container">
       <div class="contact-grid">
@@ -797,6 +901,13 @@
 
   <script src="main.js"></script>
   <script>
+    // Load YouTube video on card click
+    function loadVideo(card, videoId) {
+      const iframe = document.getElementById('vid-main');
+      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+      document.querySelector('.video-featured').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     // Cabin tabs
     document.querySelectorAll('.cabin-tab').forEach(tab => {
       tab.addEventListener('click', () => {
